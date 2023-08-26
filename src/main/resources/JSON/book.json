@@ -1,0 +1,39 @@
+[
+   {
+    "book_id":100,
+    "book_name":"DSA"
+   },
+   {
+    "book_id":101,
+    "book_name":"C"
+   },
+   {
+    "book_id":102,
+    "book_name":"C++"
+   },
+   {
+    "book_id":103,
+    "book_name":"JAVA"
+   },
+   {
+    "book_id":104,
+    "book_name":"HTML"
+   },
+   {
+    "book_id":105,
+    "book_name":"CSS"
+   },
+   {
+    "book_id":106,
+    "book_name":"JAVASCRIPT"
+   },
+   {
+    "book_id":107,
+    "book_name":"MACHINE LEARNING"
+   },
+   {
+    "book_id":108,
+    "book_name":"SQL"
+   }
+   
+]

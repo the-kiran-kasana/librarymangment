@@ -1,0 +1,101 @@
+body{
+    background-image:url("https://e1.pxfuel.com/desktop-wallpaper/721/613/desktop-wallpaper-abstract-login-page-thumbnail.jpg");
+    background-size: cover;
+} 
+/* 
+.pass{
+    height: 350px;
+    width:220px;
+    background-color: rgb(16, 12, 56);
+    margin: 10px 10px;
+    padding :2rem;
+    position:fixed;
+    left :450px;
+    top :100px;
+    border-radius: 25px;
+}
+#heading
+{
+    font-size: 20px;
+    color: white;
+    position:fixed;
+    top:100px;
+}
+#generate{
+    height :35px;
+    width:220px;
+    border-radius: 5px;
+    position:fixed;
+    top:160px;
+    color:white;
+    background-color: rgb(53, 53, 70);
+    border-color:rgb(53, 53, 70);
+}
+#box2{
+    height:35px;
+    width:220px;
+    background-color:rgb(53, 53, 70);
+    position:fixed;
+    top:210px;
+} 
+
+#parag{
+    color:white;
+} */
+
+.admin{
+    height: 350px;
+    width: 250px;
+     background-color:rgb(223, 233, 243); 
+    position:fixed;
+    top:180px;
+    left:450px;
+    border:1px,solid;
+    border-color:black;
+    margin: 8px 0;
+    padding: 12px 20px;
+    display: inline-block;
+
+}
+.btn{
+    background-color: rgb(61, 106, 230);
+    color:white;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    border-color: 1px solid white;
+    padding: 5px 10px;
+     margin: 8px 0; 
+    cursor: pointer;
+}
+.users{
+       height :30px;
+       width:200px;
+       
+
+}
+.space
+{
+    height: 20px;
+}
+.head2
+{
+    
+    display: flex;
+    color:aliceblue;
+    margin-top: 40px;
+
+padding-left: 420px;
+
+}
+.head1
+{
+    display: flex;
+    color:aliceblue;
+    margin-top: 30px;
+
+padding-left: 480px;
+
+}
+
+
