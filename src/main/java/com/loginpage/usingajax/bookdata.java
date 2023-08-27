@@ -9,11 +9,12 @@ public class bookdata {
        this.book_id=book_id;
        this.book_name=book_name;
     }
+    // Json example : {"book_name":"c++", "book_id":"1"}
     @Override
     public String toString() {
         return "{"
-                    + "\"name\": \"" + book_name + "\","
-                    + "\"id\":\"" + book_id
+                    + "\"book_name\": \"" + book_name + "\","
+                    + "\"book_id\":\"" + book_id
                 + "\"}";
     }
     
