@@ -32,10 +32,9 @@ public class booksview {
 
     @Override
     public String toString() {
-        return "booksview{" +
-                "book_id='" + book_id + '\'' +
-                ", book_name='" + book_name + '\'' +
-                
-                '}';
+        return "{"
+                    + "\"book_id\":\"" + book_id + "\","
+                    + "\"book_name\":\"" + book_name + "\""
+                + "}";
     }
 }

@@ -1,16 +1,16 @@
 package com.loginpage.usingajax;
 
-public class newbok {
+public class newbook {
 
     private int book_id;
     private String book_name;
 
-    public newbok(int book_id, String book_name) {
+    public newbook(int book_id, String book_name) {
         this.book_id = book_id;
         this.book_name = book_name;
       
     }
-    public newbok () {
+    public newbook () {
     }
 
     public int getbook_id() {
@@ -33,11 +33,10 @@ public class newbok {
 
     @Override
     public String toString() {
-        return "booksview{" +
-                "book_id='" + book_id + '\'' +
-                ", book_name='" + book_name + '\'' +
-                
-                '}';
+        return "{"
+                    + "\"book_id\":\"" + book_id + "\","
+                    + "\"book_name\":\"" + book_name + "\""
+                    + "}";
     }
 }
 

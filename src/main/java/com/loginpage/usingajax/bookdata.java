@@ -11,10 +11,10 @@ public class bookdata {
     }
     @Override
     public String toString() {
-        return "jsonresponse{" +
-                "name='" + book_name + '\'' +
-                ", id=" + book_id +
-                '}';
+        return "{"
+                    + "\"name\": \"" + book_name + "\","
+                    + "\"id\":\"" + book_id
+                + "\"}";
     }
     
 }
