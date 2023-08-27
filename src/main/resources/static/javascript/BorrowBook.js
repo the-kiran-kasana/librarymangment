@@ -61,14 +61,13 @@ function getBooksAndList() {
 
 
 function getDiv(bookId, bookName) {
-    return "<div style=\"border: 1px solid #ddd; padding: 10px; display: flex;  width: 200px; background-color: #722212; margin-top: 20px;\">\n" +
-    "        <img src=\"/images/book_" + bookId + ".png\" alt=\"Book Cover\" style=\"width: 100px; height: auto; margin-right: 10px; background-color: aqua;\">\n" +
-    "        <div style=\"font-family: Arial, sans-serif; background-color: #04AA6D;\">\n" +
-    "             <br>"+
-    "            <h3>" + bookName + "</h3>\n" +
-    "            <p>Book_id : " + bookId + "</p>\n" +
-    "        </div>\n" +
+    return "<div style=\"border: 1px solid #ddd; padding: 20px;  height:380px;  width: 200px;  background-color: lightblack; margin-bottom: 50px; margin-top: 20px;\">" +
+    "        <img src=\"/images/book_" + bookId + ".png\" alt=\"Book Cover\" style=\"width: 200px; height: 220; background-color: aqua;\">" +
+    "        <div style=\"background-color: white; height:70px;width: 200px;\">" +
+    "            <h3>" + bookName + "</h3>" +
+    "            <p>Book_id : " + bookId + "</p>" +
+    "            <button>click me</button>"+
+    "        </div>" +  
     "    </div>";
 }
-
 
