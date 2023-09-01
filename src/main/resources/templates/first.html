@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/first1.css">
+    <script type="text/javascript" src="/javascript/BorrowBook.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <div class="profile"></div>
+        <div id="profiles">username</div>
+    </ul>
+
+    <div class="wel">
+      <div id="wel1">
+         <h1>Welcome To Online Library</h1>
+
+      </div>
+    </div>
+
+    <div>
+        <img class="scrsht" src="/images/libimg.png"alt="here is notebook" height="400px" width="900px" margin-top="20px">
+    </div>
+
+    <div id="btn">
+           <button onclick="getBooksAndList()" class="btn1">library</button>
+           <button onclick="BorrowBy()" class="btn1">Borrow_Books</button>
+           <button onclick="BBM()" class="btn1">Borrow_By_Me</button>
+    </div>
+    <div id="booksList"></div>
+    <div id="borrowby">
+        <p>please change</p>
+    </div>
+    <div id="borrow_by">
+      <p>please show all books that borrow by students</p>
+  </div>
+  <div id="borrow_by_me">
+      <p>please show all books that borrow by Me</p>
+  </div>
+</body>
+</html>

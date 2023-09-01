@@ -1,6 +1,11 @@
 function login() {
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+
+  //cookies
+  // document.cookie="username=" + username;
+  // let val=document.cookie;
+  
 
   const user = { username, password };
 
@@ -10,12 +15,11 @@ function login() {
 
   xhr.onreadystatechange = function () {
     var response=this.responseText;
-    
-    console.log(this.responseText);
+    console.log(response);
       if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200 && response==="true") {
               document.getElementById('message').innerText = 'Login successful';
-              location.replace("http://localhost:8080/home");
+              location.replace("http://localhost:8080/first");
           } else {
               document.getElementById('message').innerText = 'Login failed';
           }
@@ -25,11 +29,6 @@ function login() {
   body=JSON.stringify(user)
   xhr.send(body);
 }
-
-
-
-
-
 
 
 

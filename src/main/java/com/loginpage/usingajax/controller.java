@@ -32,6 +32,19 @@ public class controller {
         return "borrow";
       }
 
+      @GetMapping("/first")
+      String libry()
+      {
+        return "first";
+      }
+      
+
+       @GetMapping("/second")
+      String libry1()
+      {
+        return "second";
+      }
+      
     
 
 }

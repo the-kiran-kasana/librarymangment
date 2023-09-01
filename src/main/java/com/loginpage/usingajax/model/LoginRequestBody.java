@@ -4,11 +4,13 @@ public class LoginRequestBody {
    
     private String username;
     private String password;
+    private String id;
    
 
-    public LoginRequestBody(String username, String password) {
+    public LoginRequestBody(String username, String password,String id) {
         this.username = username;
         this.password = password;
+        this.id=id;
       
     }
 
@@ -30,6 +32,13 @@ public class LoginRequestBody {
     public void setPassword(String password) {
         this.password = password;
     }
+    public String getid() {
+        return id;
+    }
+
+    public void setid(String id) {
+        this.id= id;
+    }
 
     
 
@@ -38,6 +47,7 @@ public class LoginRequestBody {
         return "LoginRequestBody{" +
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ",id='" + id + 
                 
                 '}';
     }
