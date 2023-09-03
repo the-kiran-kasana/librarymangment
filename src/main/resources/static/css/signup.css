@@ -1,0 +1,64 @@
+body{
+    background-image:url("https://e1.pxfuel.com/desktop-wallpaper/721/613/desktop-wallpaper-abstract-login-page-thumbnail.jpg");
+    background-size: cover;
+} 
+
+
+.admin{
+    height: 350px;
+    width: 250px;
+     background-color:whitesmoke; 
+    position:fixed;
+    top:180px;
+    left:450px;
+    border:1px,solid;
+    border-color:black;
+    margin: 8px 0;
+    padding: 12px 20px;
+    display: inline-block;
+
+}
+.btn{
+    background-color: rgb(61, 106, 230);
+    color:white;
+    height: 35px;
+    width: 200px;
+    border-radius: 15px;
+    border-color: 1px solid white;
+    padding: 10px;
+    margin-bottom: 2px; 
+    margin-top: 20px;
+    cursor: pointer;
+}
+.users{
+       height :30px;
+       width:200px;
+       
+       
+
+}
+.space
+{
+    height: 20px;
+}
+.head2
+{
+    
+    display: flex;
+    color:aliceblue;
+    margin-top: 40px;
+
+padding-left: 420px;
+
+}
+.head1
+{
+    display: flex;
+    color:aliceblue;
+    margin-top: 30px;
+
+padding-left: 480px;
+
+}
+
+

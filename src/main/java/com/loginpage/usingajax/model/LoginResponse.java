@@ -1,44 +1,44 @@
 package com.loginpage.usingajax.model;
 
 public class LoginResponse {
-    private int id;
-    private String name;
-    private String psw;
+    private String username;
+    private String password;
+     private int id;
     
    
     
 
-    public LoginResponse(String name, String psw, int id) {
+    public LoginResponse(String username, String password, int id) {
         this.id = id;
-        this.name = name;
-        this.psw = psw;
+        this.username = username;
+        this.password = password;
     }
 
     public LoginResponse() {
     }
 
 
-    public String getname() {
-        return name;
+    public String getusername() {
+        return username;
     }
 
-    public void setname(String name) {
-        this.name = name;
+    public void setusername(String username) {
+        this.username = username;
     }
 
-    public String psw() {
-        return psw;
+    public String password() {
+        return password;
     }
 
-    public void setAuthKey(String psw) {
-        this.psw = psw;
+    public void setpassword(String password) {
+        this.password = password;
     }
 
-    public int getUserId() {
+    public int getid() {
         return id;
     }
 
-    public void setUserId(int id) {
+    public void setid(int id) {
         this.id = id;
     }
 
@@ -46,8 +46,8 @@ public class LoginResponse {
     @Override
     public String toString() {
         return "LoginResponse{" +
-                "name='" + name + '\'' +
-                ", psw='" + psw + '\'' +
+                "name='" + username + '\'' +
+                ", psw='" + password + '\'' +
                 ", id=" + id +
                 '}';
     }

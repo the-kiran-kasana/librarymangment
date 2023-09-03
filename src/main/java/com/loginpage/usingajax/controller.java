@@ -14,8 +14,8 @@ public class controller {
     }
 
    // @GetMapping("/hello")
-   @RequestMapping("/hello")
-    String two()
+    @RequestMapping("/hello")
+     String two()
     {
         return "check";
     }
@@ -45,6 +45,11 @@ public class controller {
         return "second";
       }
       
-    
+     @GetMapping("/signpage")
+      String sign12()
+      {
+        return "signupage";
+      }
+      
 
 }

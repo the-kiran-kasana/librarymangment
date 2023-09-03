@@ -7,7 +7,6 @@ public class booksview {
     public booksview(int book_id, String book_name) {
         this.book_id = book_id;
         this.book_name = book_name;
-      
     }
     public booksview () {
     }
