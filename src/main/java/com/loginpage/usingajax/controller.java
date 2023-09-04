@@ -50,6 +50,12 @@ public class controller {
       {
         return "signupage";
       }
+
+      @GetMapping("/main")
+      String main()
+      {
+        return "mainpage";
+      }
       
 
 }

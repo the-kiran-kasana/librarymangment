@@ -40,6 +40,7 @@ function login() {
               location.replace("http://localhost:8080/first");
           } else {
               document.getElementById('message').innerText = 'Login failed';
+              location.replace("http://localhost:8080/main");
           }
       }
   };
@@ -73,7 +74,12 @@ function signup() {
 
   xhr.onreadystatechange = function () {
     var response=this.responseText;
-    console.log("hiiiii");
+    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+      if(password===cnfpaswd)
+      {
+        location.replace("http://localhost:8080/first");
+      }
+    }
     console.log(response);
   };
   body=JSON.stringify(user)

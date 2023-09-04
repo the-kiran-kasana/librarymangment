@@ -1,0 +1,63 @@
+Css
+body{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSozTNrLkSNdc9h6D8pkb0afy3fmifjerC_d3hJFk3s0Db2aPYjalwlcY1HaYHyiN_BJs4&usqp=CAU);
+    background-size: cover;
+    background-color: gainsboro;
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px);
+   */
+ }
+
+h1{
+    color:rgb(18, 17, 17);
+    display: flex; 
+    align-items: center;
+     margin-top: 50px;
+    margin-left: 90px; 
+}
+
+.btn1{
+      background-color: rgb(65, 160, 219);
+      height: 50px;
+      width: 150px;
+      border: 2px solid rgb(16, 17, 17);
+      color:rgb(9, 9, 9);
+      padding: 20px;
+      margin-left: 100px;
+      margin-top: 20px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: transparent;
+    border: 2px solid rgb(12, 38, 61);
+  }
+  
+  .topnav a {
+    float: left;
+    color: #0d0c0c;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+.hii{
+    border:2px solid white;
+    height:300px;
+    width: 600px;
+   margin-left: 250px;
+   margin-top: 80px;
+   padding: 50px;
+   background-color: whitesmoke;
+}
