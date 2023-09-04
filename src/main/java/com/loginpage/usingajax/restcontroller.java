@@ -7,13 +7,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 //import org.springframework.web.bind.annotation.RequestMethod;
 
-
+//import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import com.loginpage.usingajax.model.LoginRequestBody;
 import com.loginpage.usingajax.model.LoginResponse;
 import com.loginpage.usingajax.model.dataofuserbook;
 
+import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.RestController;
 //import com.loginpage.usingajax.model.newuserdata;
@@ -206,7 +207,8 @@ import com.loginpage.usingajax.model.newuserdata1;
         System.out.println(uname);
         System.out.println(upsw);
         List<LoginResponse> userbookList = new ArrayList<>();
-        String sql = "insert into users_details value(10 , '" + uname + "', '" + upsw + "');";
+        try {
+        String sql = "insert into users_details (name,psw) values ( '" + uname + "', '" + upsw + "');";
         String query="select *from users_details;";
         jdbcTemplate.execute(sql);
         jdbcTemplate.query(query,rs -> {
@@ -217,8 +219,13 @@ import com.loginpage.usingajax.model.newuserdata1;
         userbookList.add(data1);
         });
         System.out.println(userbookList);
-        return userbookList;
+    }catch (BadSqlGrammarException e)
+    {
+         System.out.println("error : "+e);
+    }
+    return userbookList;
      }
+     
     }
 
 /**************************************************************************************************************
