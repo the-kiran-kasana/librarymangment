@@ -1,11 +1,7 @@
-Css
+
 body{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSozTNrLkSNdc9h6D8pkb0afy3fmifjerC_d3hJFk3s0Db2aPYjalwlcY1HaYHyiN_BJs4&usqp=CAU);
+    background-image: url("https://garden.spoonflower.com/c/11546067/p/f/m/Dfyc59sBW1jGvvB01l3jazfgwQhzVt0wM4s3lYeU1yKZicGKVApBJQM/Solid%20sky%20blue.jpg");
     background-size: cover;
-    background-color: gainsboro;
-    /* filter: blur(8px);
-    -webkit-filter: blur(8px);
-   */
  }
 
 h1{
@@ -35,7 +31,7 @@ h1{
   
   .topnav a {
     float: left;
-    color: #0d0c0c;
+    color: #fafafa;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -53,11 +49,12 @@ h1{
   }
 
 .hii{
-    border:2px solid white;
+    border:2px solid rgb(61, 61, 61);
     height:300px;
     width: 600px;
    margin-left: 250px;
    margin-top: 80px;
    padding: 50px;
-   background-color: whitesmoke;
+   background-color: transparent;
+   color:whitesmoke;
 }

@@ -3,13 +3,15 @@
 
 
 function login() {
+
+
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
 
   const user = { username, password };
 
   const xhr = new XMLHttpRequest();
-  xhr.open('POST', "http://localhost:8080/kiran", true);
+  xhr.open('POST', "http://localhost:8080/login_rest", true);
   xhr.setRequestHeader('Content-Type', 'application/json');
 
   xhr.onreadystatechange = function () {
@@ -35,59 +37,25 @@ function login() {
 
 
       if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-          if (name===username && pass===password) {
+          if (name===username && pass===password ) {
               document.getElementById('message').innerText = 'Login successful';
-              location.replace("http://localhost:8080/first");
+              location.replace("http://localhost:8080/home_page");
           } else {
-              document.getElementById('message').innerText = 'Login failed';
-              location.replace("http://localhost:8080/main");
+              alert("login falied");
           }
       }
   };
  
-  body=JSON.stringify(user)
+  body=JSON.stringify(user);
   xhr.send(body);
 }
+
 
 /***********************************************************************************************************************
 ***********************************************************************************************************************/
 
-///  Signup page
- 
 
-
-
-
-function signup() {
-
-  var username = document.getElementById('username').value;
-  var password = document.getElementById('password').value;
-  var cnfpaswd =  document.getElementById('Confirm_password').value;
-
-  console.log(username,password,cnfpaswd);
-
-  const user = { username, password };
-
-  const xhr = new XMLHttpRequest();
-  xhr.open('POST', "http://localhost:8080/signbyuser", true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-
-  xhr.onreadystatechange = function () {
-    var response=this.responseText;
-    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-      if(password===cnfpaswd)
-      {
-        location.replace("http://localhost:8080/first");
-      }
-    }
-    console.log(response);
-  };
-  body=JSON.stringify(user)
-  xhr.send(body);
+function signup()
+{
+  location.replace("http://localhost:8080/signpage");
 }
-
-
-
-
-
-

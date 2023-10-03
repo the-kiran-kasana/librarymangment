@@ -3,10 +3,12 @@ package com.loginpage.usingajax;
 public class booksview {
     private int book_id;
     private String book_name;
+    private int bookcpy;
 
-    public booksview(int book_id, String book_name) {
+    public booksview(int book_id, String book_name,int bookcpy) {
         this.book_id = book_id;
         this.book_name = book_name;
+        this.bookcpy = bookcpy;
     }
     public booksview () {
     }
@@ -27,6 +29,13 @@ public class booksview {
         this.book_name = book_name;
     }
 
+    public int getbookcpy() {
+        return bookcpy;
+    }
+
+    public void setbookcpy(int bookcpy) {
+        this.bookcpy = bookcpy;
+    }
     
 
     @Override
@@ -34,6 +43,7 @@ public class booksview {
         return "{"
                     + "\"book_id\":\"" + book_id + "\","
                     + "\"book_name\":\"" + book_name + "\""
+                    + "\"book_copy\":\"" + bookcpy + "\""
                 + "}";
     }
 }

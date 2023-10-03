@@ -1,94 +1,42 @@
  package com.loginpage.usingajax;
 
 
-//import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestMethod;
-
-//import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import com.loginpage.usingajax.model.LoginRequestBody;
 import com.loginpage.usingajax.model.LoginResponse;
 import com.loginpage.usingajax.model.dataofuserbook;
-
 import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.RestController;
-//import com.loginpage.usingajax.model.newuserdata;
-import com.loginpage.usingajax.model.newuserdata1;
-
-// import com.loginpage.usingajax.booksview;
-// import com.loginpage.usingajax.newbok;
-
-// import com.loginpage.usingajax.bookdata;
-
-
+import com.loginpage.usingajax.model.newuserdata1; 
 
  
- 
+
+
+
+//Check Username And Password For Login Page
 @RestController
  public class restcontroller 
  {
-
     private final JdbcTemplate jdbcTemplate;
     public restcontroller(JdbcTemplate jdbcTemplat)
     {
         this.jdbcTemplate=jdbcTemplat;
     }
 
-    // @PostMapping("/kiran")
-    // public String saveUsers(@RequestBody LoginRequestBody data)
-    //  {
-    //       String username=data.getUsername();
-    //       String password=data.getPassword();
-    //       System.out.println(data.getUsername());
-    //       System.out.println(data.getPassword());
-    //       List<newuserdata> datafromdb = new ArrayList<>();
-    //       String query="select *from users_details where name= '"+username+"' and psw= '"+password+"';";
-    //       jdbcTemplate.execute(query);
-    //       jdbcTemplate.query(query,rs ->{  
-    //       String a=rs.getString("id");
-    //       String b=rs.getString("name");
-    //       String c=rs.getString("psw");
-    //       newuserdata user1 = new newuserdata(a,b,c);
-    //       datafromdb.add(user1);
-    //       });
-    //       System.out.println(datafromdb);
-    //       System.out.println(datafromdb.size());
 
-    //       //return datafromdb.toString();
-          
-    //       if(datafromdb.size()==0)
-    //       {
-    //          return "false";
-    //       }
-    //       else{
-    //         return "true";
-    //       }
-    //   }
-      
-
-/**************************************************************************************************************
-/**************************************************************************************************************/
-
-//Check Username And Password For Login Page
-
-    @PostMapping("/kiran")
+    @PostMapping("/login_rest")
     public  List<newuserdata1> forid(@RequestBody LoginRequestBody data)
      {
           String username=data.getUsername();
           String password=data.getPassword();
-          System.out.println(data.getUsername());
-          System.out.println(data.getPassword());
-
           List<newuserdata1> datafromdb = new ArrayList<>();
-
           String query="select *from users_details where name= '"+username+"' and psw= '"+password+"';";
-          jdbcTemplate.execute(query);
-          
+          jdbcTemplate.execute(query); 
           jdbcTemplate.query(query,rs ->{   
           newuserdata1 user1 = new newuserdata1();
           user1.setid(rs.getInt("id"));
@@ -116,6 +64,7 @@ import com.loginpage.usingajax.model.newuserdata1;
         booksview data = new booksview();
         data.setbook_id(rs.getInt("book_id"));
         data.setbook_name(rs.getString("book_name"));
+        data.setbookcpy(rs.getInt("bookcpy"));
         dataList.add(data);
          });
         return dataList;
@@ -136,7 +85,7 @@ import com.loginpage.usingajax.model.newuserdata1;
         System.out.println(book.getid());
         System.out.println(book.getbook_id());
         List<dataofuserbook> bookdata = new ArrayList<>();
-        String query1="insert into userbooks value(" + userid + ",' " + bookid + " ');";
+        String query1="insert into userbooks value('" + userid + "',' " + bookid + " ');";
         String query="select *from userbooks;";
         jdbcTemplate.execute(query1);
         jdbcTemplate.query(query,rs ->{  
@@ -148,6 +97,32 @@ import com.loginpage.usingajax.model.newuserdata1;
         System.out.println(bookdata);
         return bookdata.toString();
      }
+
+/**************************************************************************************************************
+ **************************************************************************************************************/
+
+ //INSERT DATA INTO TABLE THAT TOOK BY STUDENTS
+
+     @PostMapping("/returnapi")
+     public String returnbyuser(@RequestBody userbooks book)
+     {
+        String  bookid=book.getbook_id();
+        System.out.println(book.getbook_id());
+        List<dataofuserbook> bookdata = new ArrayList<>();
+        String query1="delete from userbooks where book_id="+bookid+";";
+        String query="select *from userbooks;";
+        jdbcTemplate.execute(query1);
+        jdbcTemplate.query(query,rs ->{  
+        String a=rs.getString("id");
+        String b=rs.getString("book_id");
+        dataofuserbook book1 = new dataofuserbook(a,b);
+        bookdata.add(book1);
+        });
+        System.out.println(bookdata);
+        return bookdata.toString();
+     }
+
+
 
 
 /**************************************************************************************************************
@@ -177,29 +152,49 @@ import com.loginpage.usingajax.model.newuserdata1;
 
 // SHOW THE ALL BOOKS THAT BORROW BY A UNIEQ ID
 
-    @PostMapping("/borrowbyme")
-    public List<userbooks1> extractDatafromUBBM(@RequestBody userbooks  data)
+
+
+    @RequestMapping("/borrowbyme")
+    public List<userbooks> extractDatafromUBbb(@RequestBody userbooks book)
     {
-        String userid=data.getid();
-        System.out.println(userid);
-        List<userbooks1> userbookList = new ArrayList<>();
-        String sql = "select *from userbooks where  id = '" + userid + "';";
-         jdbcTemplate.execute(sql);
+        String  Uid=book.getid();
+        System.out.println(Uid);
+        List<userbooks> userbookList = new ArrayList<>();
+        String sql = "select *from userbooks where id='" + Uid + "';";
         jdbcTemplate.query(sql,rs -> {
-        userbooks1 data1 = new userbooks1();
-        data1.setid(rs.getInt("id"));
-        data1.setbook_id(rs.getInt("book_id"));
-        userbookList.add(data1);
-        });
-        System.out.println(userbookList);
+        userbooks data = new userbooks();
+        data.setid(rs.getString("id"));
+        data.setbook_id(rs.getString("book_id"));
+        userbookList.add(data);
+         });
         return userbookList;
 
      }
+    
+
+
 /**************************************************************************************************************
  **************************************************************************************************************/
-//sign up page for students
 
-    @PostMapping("/signbyuser")
+// This commit is not valid, Im updating this commit, Dont make nonsense commit again in my code repo.
+
+
+    //   @RequestMapping("/library")
+    //   public booksview libry()
+    //   {
+            
+    //       booksview book=new booksview(1,"kiran");
+         
+    //       System.out.println(book);
+    //       return book;
+    //   }
+           
+/**************************************************************************************************************
+ **************************************************************************************************************/
+
+      //Sign_up_page 
+
+ @PostMapping("/signbyuser")
     public List<LoginResponse> extractfromsignup(@RequestBody LoginRequestBody  data)
     {
         String uname=data.getUsername();
@@ -226,22 +221,33 @@ import com.loginpage.usingajax.model.newuserdata1;
     return userbookList;
      }
      
-    }
+    
 
+              
 /**************************************************************************************************************
  **************************************************************************************************************/
 
-// This commit is not valid, Im updating this commit, Dont make nonsense commit again in my code repo.
+ //the number of available copy of book
+ 
+  @PostMapping("/setcpys")
+     public String bookcpys(@RequestBody booksview book)
+     {
+        int bcpys=book.getbookcpy();
+        int book_id=book.getbook_id();
+        System.out.println(book.getbook_id());
+        System.out.println(book.getbookcpy());
 
-
-    //   @RequestMapping("/library")
-    //   public booksview libry()
-    //   {
-            
-    //       booksview book=new booksview(1,"kiran");
-         
-    //       System.out.println(book);
-    //       return book;
-    //   }
-
-      
+        List<dataofuserbook> bookdata = new ArrayList<>();
+        String query1= "UPDATE books SET bookcpy = " + bcpys + " WHERE book_id=" + book_id + ";";
+        String query="select *from books;";
+        jdbcTemplate.execute(query1);
+        jdbcTemplate.query(query,rs ->{  
+        String a=rs.getString("book_id");
+        String b=rs.getString("bookcpy");
+        dataofuserbook book1 = new dataofuserbook(a,b);
+        bookdata.add(book1);
+        });
+        System.out.println(bookdata);
+        return bookdata.toString();
+     }
+    }

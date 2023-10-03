@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <script type="text/javascript" src="/javascript/login_js.js"></script>
+    <script type="text/javascript" src="/javascript/BorrowBook.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/login_css.css">
+<body>
+    <div class="login">
+
+      <div class="logo">
+        <img class="imge" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmyfnSFgYLl1kusMbdXyooL3OYEoFIdzcgpsQDXsIRKGu_ieBsPiyaRE_PRtmel_9hRDE&usqp=CAU"alt="sdit logo">
+        <h1 class="title">Library Managment System</h1>
+      </div>
+    
+    <div class="admin"> 
+     <img class="sdit" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmyfnSFgYLl1kusMbdXyooL3OYEoFIdzcgpsQDXsIRKGu_ieBsPiyaRE_PRtmel_9hRDE&usqp=CAU"alt="sdit logo">  
+     <div class="space"></div>
+     <from>
+              <label class="log" for="uname"><b>Username</b></label>
+              <input id="username" class="users" style="background-color:rgb(205, 213, 222)" type="text" placeholder="Email id /admin name";>
+              <div class="space"></div>
+              <label class="log" for="uname"><b>Password</b></label>
+              <input class="users" id="password"  style="background-color:rgb(204, 208, 214) ;" type="password" placeholder="Enter password";>
+              <u><h5 class="log" style="color :rgb(70, 70, 192)">Forgot password</h5></u>
+              <button class="btn"  onclick="login()">Login</button>
+              <hr>
+              <button class="btn1"  onclick="signup()">Sign up</button>
+       </from>
+    <div id="message"></div>
+    <div id="cookiess"></div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>

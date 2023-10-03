@@ -2,24 +2,17 @@ package com.loginpage.usingajax;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class controller {
     
-    @GetMapping("/html")
+    @GetMapping("/login_ctr")
     String temp()  
     {
-        return "front";
+        return "login_html";
     }
 
-   // @GetMapping("/hello")
-    @RequestMapping("/hello")
-     String two()
-    {
-        return "check";
-    }
-
+   
     @GetMapping("/home")
       String homepage()
       {
@@ -32,14 +25,14 @@ public class controller {
         return "borrow";
       }
 
-      @GetMapping("/first")
+      @GetMapping("/home_page")
       String libry()
       {
-        return "first";
+        return "home_page";
       }
       
 
-       @GetMapping("/second")
+      @GetMapping("/second")
       String libry1()
       {
         return "second";

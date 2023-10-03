@@ -1,0 +1,101 @@
+body{
+    background-image:url("https://garden.spoonflower.com/c/11546067/p/f/m/Dfyc59sBW1jGvvB01l3jazfgwQhzVt0wM4s3lYeU1yKZicGKVApBJQM/Solid%20sky%20blue.jpg");
+    background-size: cover;
+} 
+
+.login
+{
+   height: 500px;
+   width:900px;
+   align-items:center;
+   display: flex;
+   background-color: rgb(164, 202, 231);
+   padding: 20px;
+   margin-top: 80px;
+   margin-left: 130px;
+
+}
+.imge{
+    height: 150px;
+    width:150px;
+    margin-left:200px ;
+}
+.title{
+    margin-left:90px ;
+}
+.sdit{
+    height:50px;
+    width: 50px;
+    padding: 1px;
+    display: flex;
+    align-items:center;
+    margin-left: 100px;
+}
+.admin{
+    height: 350px;
+    width: 250px;
+    background-color:white; 
+    position:fixed;
+    border:1px,solid;
+    border-color:black;
+    margin: 8px 0;
+    padding: 20px;
+    display: inline-block;
+    align-items:center;
+    margin-left: 600px;
+    margin-top: 10px;  
+}
+.btn{
+    background-color: rgb(61, 104, 223);
+    color:white;
+    height: 35px;
+    width: 220px;
+    border-radius: 8px;
+    margin-left: 15px;
+}
+.btn1{
+    background-color: rgb(49, 177, 107);
+    color:white;
+    height: 35px;
+    width: 220px;
+    border-radius: 8px;
+    margin-left: 15px;
+}
+.users{
+       height :30px;
+       width:220px;
+       margin-left: 15px;
+       border-radius: 5px;
+       background-color:white;
+
+
+}
+.space
+{
+    height: 20px;
+}
+.head2
+{
+    
+    display: flex;
+    color:aliceblue;
+    margin-top: 40px;
+
+padding-left: 420px;
+
+}
+.head1
+{
+    display: flex;
+    color:aliceblue;
+    margin-top: 30px;
+
+padding-left: 480px;
+
+}
+
+.log{
+    margin-left: 20px;
+}
+
+

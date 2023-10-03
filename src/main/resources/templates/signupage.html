@@ -1,34 +1,57 @@
+
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>singup page</title>
-    <script type="text/javascript" src="/javascript/backsheet.js"></script>
- <link rel="stylesheet" type="text/css" href="/css/signup.css">
+    <script type="text/javascript" src="/javascript/signup_page.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/signup.css">
+    <title>Document</title>
+</head>
 <body>
-<h1 class="head1">SignUp Page </h1>
-<h2 class="head2">Account for student attendence</h2>
-<div class="admin">
-    <h1 style="color:rgb(61, 106, 230)">Sign Up</h1>
-    <from>
-        <label  id="log" for="uname"></label>
-        <b>Username</b>
-        <div id="hii">
-        <input id="username" class="users" style="background-color:transparent" type="text" placeholder="Email id\username";>
-        <div class="space"></div>
-        <label for="uname"><b>Password</b></label>
-        <input class="users" id="password"  style="background-color:transparent;" type="password" placeholder="Enter password";>
-        <div class="space"></div>
-        <label for="uname"><b>Confirm Password</b></label>
-        <input class="users" id="Confirm_password"  style="background-color:transparent;" type="password" placeholder="Again enter password";>
-       
-        <button class="btn"  onclick="signup()">SignUp</button>
-        </div>
-    </from>
-    <div id="message"></div>
-    <div id="cookiess"></div>
-</div>
-</body>
+    
 
-</html>
+
+  <img class="sdit" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmyfnSFgYLl1kusMbdXyooL3OYEoFIdzcgpsQDXsIRKGu_ieBsPiyaRE_PRtmel_9hRDE&usqp=CAU"alt="sdit logo">  
+
+    <div class='parent'>
+      <div class='child'>
+        <h5>Student name</h5>
+        <input id="stdname" class="users" style="background-color:white" type="text" placeholder="Enter student name";>
+        <h5>Student rollnumber</h5>
+        <input id="stdpsw" class="users" style="background-color:white" type="text" placeholder="Enter student rollnumber";>
+        <h5>Student branch</h5>
+        <select id="branch" class="users" >
+            <option value="computer science">Computer Science</option>
+            <option value="civi engineer">Civil Engineering</option>
+            <option value="machnical engineering">Machnical Engineering</option>
+            <option value="electrical engineering">Electrical Engineering</option>
+            <option value="robotics">Robotics</option>
+          </select>
+          <h5>Student Year</h5>
+          <select id="year"  class="users">
+            <option value="1st year">1st year</option>
+            <option value="2nd year">2nd year</option>
+            <option value="3rd year">3rd year</option>
+            <option value="4th year">4th year</option>
+          </select>
+      </div>
+
+      <div class='child1'>
+
+            <h5>Username</h5>
+            <input id="username" class="users" style="background-color:white" type="text" placeholder="Enter username";>
+            <h5>Password</h5>
+            <input id="password" class="users" style="background-color:white" type="text" placeholder="Enter password";>
+            <h5>Confirm_password</h5>
+            <input id="confirmpsw" class="users" style="background-color:white" type="text" placeholder="Eenter confirm_password";>   
+
+            <u><h5>check if username avaiable?</h5></u>
+            <u><h5>forget password</h5></u>
+            
+      </div>
+
+      <button class="btn" onclick="signup()">Create New Account</button>
+     <div id="message"></div>
+    </div>
+    
